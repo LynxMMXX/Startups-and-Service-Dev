@@ -26,12 +26,12 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-%+g7_d1*58e!&f=*nx4)-fdf7)4hr25!_(p#g1-^j0h#at&)l@'
+SECRET_KEY = 'fe@39759Q#(niofjreornaeA_Wrenrkw[1\qfnisdf24eq329vsdAHOI($*#^80ntsp@_&#47tgzd5h^74fd#z5)d(%*p@cx6cal-k8==2854o'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['DevsMedicalScanner.onrender.com',]
 
 
 # Application definition
