@@ -29,9 +29,9 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 SECRET_KEY = 'fe@39759Q#(niofjreornaeA_Wrenrkw[1\qfnisdf24eq329vsdAHOI($*#^80ntsp@_&#47tgzd5h^74fd#z5)d(%*p@cx6cal-k8==2854o'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['DevsMedicalScanner.onrender.com', '127.0.0.1']
+ALLOWED_HOSTS = ['DevsMedicalScanner.onrender.com',]
 
 
 # Application definition
