@@ -9,7 +9,7 @@ import seaborn as sns
 import tensorflow as tf
 from tensorflow import keras
 
-os.listdir("./website/chest_xray")
+os.listdir("./pneumonia_website/website/chest_xray")
 
 #imports necessary for the Ai to work
 
@@ -22,7 +22,7 @@ from tensorflow.keras.preprocessing.image import ImageDataGenerator
 #importing the tools required for python to recognize the model
 
 # %%
-new_model = tf.keras.models.load_model('./website/my_checkpoint_Pnuemonia.keras')
+new_model = tf.keras.models.load_model('./pneumonia_website/website/my_checkpoint_Pnuemonia.keras')
 
 # Show the model architecture
 new_model.summary()
@@ -43,7 +43,7 @@ image_generator = ImageDataGenerator(
 #doing a simple normalization and centering of the image to make it easier for the model to read
 
 # %%
-pnmoniatestdir = "website/test_images_Pnmonia"
+pnmoniatestdir = "./pneumonia_website/website/test_images_Pnmonia"
 PnmoniaTest = image_generator.flow_from_directory(pnmoniatestdir, 
                                             batch_size=1, 
                                             shuffle=False, 
@@ -56,7 +56,7 @@ def runImageTesting():
     model_prediction = new_model.predict(PnmoniaTest)
 
     plt.subplot(3, 3, 1)
-    img = plt.imread(os.path.join("website/test_images_Pnmonia/uploaded_images", os.listdir("website/test_images_Pnmonia/uploaded_images")[0]))
+    img = plt.imread(os.path.join("./pneumonia_website/website/test_images_Pnmonia/uploaded_images", os.listdir("./pneumonia_website/website/test_images_Pnmonia/uploaded_images")[0]))
     plt.imshow(img, cmap='gray')
     plt.axis('off')
     return str(model_prediction[0]*100)
