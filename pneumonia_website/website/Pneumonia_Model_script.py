@@ -7,6 +7,10 @@ matplotlib.use('Agg')  # Use a non-GUI backend like Agg
 import matplotlib.pyplot as plt
 import seaborn as sns
 import tensorflow as tf
+physical_devices = tf.config.list_physical_devices('GPU')
+if physical_devices:
+    tf.config.experimental.set_memory_growth(physical_devices[0], True)
+tf.config.set_visible_devices([], 'GPU') 
 from tensorflow import keras
 
 os.listdir("./pneumonia_website/website/chest_xray")
